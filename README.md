@@ -15,22 +15,22 @@ Why doesn't this exist already in the literature?!
 
 Data from Wiley, "Incompressible Flow" (4th Ed.).
 
-## Model
+## TL;DR: The Model
 
-The following model is given where `x = log10(Re)`:
+The following model is found, where `x = log10(Re)`:
 
 The model:
 
-Matlab-y syntax:
-```
+Matlab-ish syntax:
+```matlab
 log10(CD) = 
-(log10(10^(csub0*x+csub1)+csub2+csub3*x))*(1-1/(1+exp(-csigh*(x-csigc))))  + (csup0+csupscl/csuph*log(exp(csuph*(csupc-x))+1))*(1/(1+exp(-csigh*(x-csigc))))
+(log10(10^(csub0*x+csub1)+csub2+csub3*x))*(1-1/(1+exp(-csigh*(x-csigc)))) + (csup0+csupscl/csuph*log(exp(csuph*(csupc-x))+1))*(1/(1+exp(-csigh*(x-csigc))))
 ```
 
-Python-y syntax:
-```
+Python-ish syntax:
+```python
 log10(CD) = 
-(log10(10 ** (csub0*x+csub1)+csub2+csub3*x))*(1-1/(1+exp(-csigh*(x-csigc))))  + (csup0+csupscl/csuph*log(exp(csuph*(csupc-x))+1))*(1/(1+exp(-csigh*(x-csigc))))
+(log10(10 ** (csub0*x+csub1)+csub2+csub3*x))*(1-1/(1+exp(-csigh*(x-csigc)))) + (csup0+csupscl/csuph*log(exp(csuph*(csupc-x))+1))*(1/(1+exp(-csigh*(x-csigc))))
 ```
 Constants:
 ```
