@@ -17,17 +17,19 @@ Data from Wiley, "Incompressible Flow" (4th Ed.).
 
 ## Model
 
-The following model is given where `x = log10(Re)`, and it outputs `log10(CD)`.
+The following model is given where `x = log10(Re)`:
 
 The model:
 
 Matlab-y syntax:
 ```
+log10(CD) = 
 (log10(10^(csub0*x+csub1)+csub2+csub3*x))*(1-1/(1+exp(-csigh*(x-csigc))))  + (csup0+csupscl/csuph*log(exp(csuph*(csupc-x))+1))*(1/(1+exp(-csigh*(x-csigc))))
 ```
 
 Python-y syntax:
 ```
+log10(CD) = 
 (log10(10 ** (csub0*x+csub1)+csub2+csub3*x))*(1-1/(1+exp(-csigh*(x-csigc))))  + (csup0+csupscl/csuph*log(exp(csuph*(csupc-x))+1))*(1/(1+exp(-csigh*(x-csigc))))
 ```
 Constants:
