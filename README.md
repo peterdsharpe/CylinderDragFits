@@ -17,6 +17,8 @@ Data from Wiley, "Incompressible Flow" (4th Ed.).
 
 ## Model
 
+The following model is given where `x = log10(Re)`, and it outputs `log10(CD)`.
+
 The model:
 
 Matlab-y syntax:
